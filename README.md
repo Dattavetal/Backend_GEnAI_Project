@@ -29,7 +29,14 @@ PotpieAI_project/
 
 ## 🛠️ Setup Instructions
 
-### 1. Start ChromaDB
+### Step 1.1: Clone the project
+
+```bash
+git clone https://github.com/yourusername/PotpieAI_Project.git
+cd PotpieAI_Project
+```
+
+### Step 1.2: Start ChromaDB (used by both services)
 
 ```bash
 cd document_service
