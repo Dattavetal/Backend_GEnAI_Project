@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+.env
+.env.*
+*.sqlite3
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter & VS Code
+.ipynb_checkpoints/
+.vscode/
+*.code-workspace
+
+# Logs and output
+*.log
+*.out
+*.DS_Store
+
+# Docker
+*.pid
+*.pid.lock
+docker-compose.override.yml
+chroma_data/
+
+# System files
+Thumbs.db
+Desktop.ini
+
+# PyInstaller
+dist/
+build/
+*.spec
+
+# Other IDEs
+.idea/
+*.swp
+
+# Test cache
+.coverage
+.cache/
+htmlcov/
+
+# Node (if any frontend or Swagger UI is used)
+node_modules/
+
+# Mac/Linux/Windows system junk
+.DS_Store
+*.bak
+*.tmp

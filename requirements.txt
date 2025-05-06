@@ -1,0 +1,13 @@
+flask
+chromadb
+langchain
+python-dotenv
+langchain-community
+python-docx
+PyMuPDF
+sentence-transformers
+langchain-huggingface
+uuid
+flask-cors
+langchain-llm7
+langgraph
