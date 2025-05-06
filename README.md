@@ -16,13 +16,13 @@ PotpieAI_project/
 │   ├── utils.py             # Functions to retrieve chunks and stream LLM7 response
 │   ├── agent_graph.py       # Optional LangGraph implementation for structured reasoning
 │   ├── config.py            # (optional config if used)
-│  
-└── document_service/
-│    ├── app.py               # Main Flask application
-│    ├── utils.py             # Utility functions for embedding, file reading, and chunking
-│    ├── docker-compose.yml   # ChromaDB container
-└── requirements.txt
-└── README.md    
+├── document_service/
+│   ├── app.py               # Flask app to handle file upload & embedding
+│   ├── utils.py             # Utility functions for embedding, file reading, and chunking
+│   ├── docker-compose.yml   # Runs ChromaDB locally
+├── requirements.txt         # Shared Python dependencies
+├── .gitignore
+└── README.md                # Project documentation (this file)   
 ```
 
 ---
@@ -51,12 +51,15 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
 #### Document Service
 
 ```bash
 cd document_service
 python app.py
 ```
+
+Runs on: `http://localhost:5001`
 
 #### Chatbot Service
 
@@ -65,9 +68,12 @@ cd chatbot_service
 python app.py
 ```
 
+Runs on: `http://localhost:5002`
+
 ---
 
 ## 📄 Document Upload API
+
 
 **Endpoint:** `POST /api/documents/process`
 
@@ -181,8 +187,13 @@ Follows this flow:
 
 ## 📌 Notes
 
-- ChromaDB must run on `localhost:8000`.
-- Ensure the same `asset_id` is used throughout.
-- Add volume to `docker-compose.yml` for persistent vector storage.
+- Ensure ChromaDB is running at `localhost:8000`.
+- Use the same `asset_id` from document upload in the chatbot.
+- For persistence, mount a volume to `docker-compose.yml`:
+
+```yaml
+volumes:
+  - ./chroma_data:/chroma/.chroma
+```
 
 ---
