@@ -179,7 +179,3 @@ Follows this flow:
 - Add volume to `docker-compose.yml` for persistent vector storage.
 
 ---
-
-## 📬 Contact
-
-For issues or collaboration, please reach out to the PotpieAI team.
