@@ -32,7 +32,7 @@ PotpieAI_project/
 ### Step 1.1: Clone the project
 
 ```bash
-git clone https://github.com/yourusername/PotpieAI_Project.git
+git clone https://github.com/Dattavetal/Backend_GEnAI_Project.git
 cd PotpieAI_Project
 ```
 
